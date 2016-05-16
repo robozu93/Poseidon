@@ -8,9 +8,10 @@ var mongo = require('mongodb'); //Biblioteca para comunicarse con la base de dat
 
 //Puerto de conexión con la base de datos (no es el mismo de escucha del servidor)
 var uristring = 
-  process.env.MONGOLAB_URI || 
-  process.env.MONGOHQ_URL || 
-  'mongodb://localhost/Prueba';
+    process.env.MONGODB_URI || 
+    process.env.MONGOHQ_URL || 
+    process.env.MONGOLAB_URI||
+    'mongodb://localhost/Prueba';
 
 var db;
 
