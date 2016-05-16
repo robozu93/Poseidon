@@ -28,8 +28,9 @@ mongo.MongoClient.connect(uristring, function(err, database) {
 /* Funciones CRUD Básicas */
 
 //GET - READ
-exports.getData = function(req,res) {        
-    db.collection('Poseidon').find(req.query).toArray(
+exports.getData = function(req,res) {    
+    res.send(200, uristring);    
+    /*db.collection('Poseidon').find(req.query).toArray(
         function(error, doc){
             if(error) {
                 throw error;
@@ -39,7 +40,7 @@ exports.getData = function(req,res) {
                 res.send(200, doc);
             }
         }
-    )
+    )*/
 }
 
 /*
