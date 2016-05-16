@@ -12,6 +12,7 @@ var uristring =
   process.env.MONGOHQ_URL || 
   'mongodb://localhost/Prueba';
 
+var db;
 
 //Conexión con la base de datos
 mongo.MongoClient.connect(uristring, function(err, database) {
