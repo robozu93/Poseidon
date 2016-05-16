@@ -30,8 +30,7 @@ mongo.MongoClient.connect(uristring, function(err, database) {
 
 //GET - READ
 exports.getData = function(req,res) {    
-    res.send(200, uristring);    
-    /*db.collection('Poseidon').find(req.query).toArray(
+    db.collection('Poseidon').find(req.query).toArray(
         function(error, doc){
             if(error) {
                 throw error;
@@ -41,7 +40,7 @@ exports.getData = function(req,res) {
                 res.send(200, doc);
             }
         }
-    )*/
+    )
 }
 
 /*
